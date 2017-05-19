@@ -14,11 +14,16 @@ namespace Csharp_Funadamentals_w_VS2015
             GradeBook book = new GradeBook();
             book.AddGrade(91);
             book.AddGrade(89.5f);
+            book.AddGrade(75);
 
             GradeStatistics stats = book.ComputeStatistics();
 
-            GradeBook book2 = book;
-            book2.AddGrade(75);
+            Console.WriteLine(stats.AverageGrade);
+            Console.WriteLine(stats.LowestGrade);
+            Console.WriteLine(stats.HighestGrade);
+
+          
+            
 
             
 
