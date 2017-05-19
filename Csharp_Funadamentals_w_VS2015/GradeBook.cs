@@ -8,13 +8,20 @@ namespace Csharp_Funadamentals_w_VS2015
 {
     class GradeBook
     {
+
+        public GradeBook()
+        {
+            grades = new List<float>();
+        }
+
         public void AddGrade(float grade)
         {
             grades.Add(grade);
         }
 
-        List<float> grades = new List<float>();
+        List<float> grades;
 
+        
 
 
 
