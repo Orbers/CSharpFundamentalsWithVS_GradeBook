@@ -14,12 +14,17 @@ namespace Csharp_Funadamentals_w_VS2015
             grades = new List<float>();
         }
 
+        public GradeStatistics ComputeStatistics()
+        {
+            return new GradeStatistics();
+        }
+
         public void AddGrade(float grade)
         {
             grades.Add(grade);
         }
 
-        List<float> grades;
+        private List<float> grades;
 
         
 
