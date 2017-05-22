@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Csharp_Funadamentals_w_VS2015
 {
-    class GradeStatistics
+    public class GradeStatistics
     {
         public GradeStatistics()
         {

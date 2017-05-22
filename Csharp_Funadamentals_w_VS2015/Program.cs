@@ -11,6 +11,9 @@ namespace Csharp_Funadamentals_w_VS2015
         static void Main(string[] args)
         {
 
+
+
+
             GradeBook book = new GradeBook();
             book.AddGrade(91);
             book.AddGrade(89.5f);
@@ -22,10 +25,10 @@ namespace Csharp_Funadamentals_w_VS2015
             Console.WriteLine(stats.LowestGrade);
             Console.WriteLine(stats.HighestGrade);
 
-          
-            
 
-            
+
+
+
 
             Console.ReadKey();
         }

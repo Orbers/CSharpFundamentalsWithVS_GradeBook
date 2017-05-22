@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Csharp_Funadamentals_w_VS2015
 {
-    class GradeBook
+    public class GradeBook
     {
 
         public GradeBook()
@@ -36,6 +36,7 @@ namespace Csharp_Funadamentals_w_VS2015
             grades.Add(grade);
         }
 
+        public string Name;
         private List<float> grades;
 
         
