@@ -49,7 +49,13 @@ namespace Csharp_Funadamentals_w_VS2015
                 {
                     if(_name != value)
                     {
-                        NameChanged(_name, value);
+                        NameChangedEventArgs args = new NameChangedEventArgs();
+                        args.ExistingName = _name;
+                        args.NewName = value;
+
+                        NameChanged(this, args);
+
+                        
                     }
 
                     _name = value;
@@ -58,7 +64,7 @@ namespace Csharp_Funadamentals_w_VS2015
         }
 
 
-        public NameChangedDelegate NameChanged;
+        public event NameChangedDelegate NameChanged;
 
         private string _name;
         private List<float> grades;
