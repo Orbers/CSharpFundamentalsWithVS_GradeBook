@@ -36,7 +36,23 @@ namespace Csharp_Funadamentals_w_VS2015
             grades.Add(grade);
         }
 
-        public string Name;
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                if (!String.IsNullOrEmpty(value))
+                {
+                    _name = value;
+                }
+            }    
+        }
+
+
+        private string _name;
         private List<float> grades;
 
         
