@@ -12,7 +12,13 @@ namespace Csharp_Funadamentals_w_VS2015
         {
 
             GradeBook book = new GradeBook();
+
+            book.NameChanged += new NameChangedDelegate(OnNameChanged);
+            book.NameChanged += new NameChangedDelegate(OnNameChanged2);
+
+
             book.Name = "Corbin's Grade Book";
+
             book.AddGrade(91);
             book.AddGrade(89.5f);
             book.AddGrade(75);
@@ -24,6 +30,16 @@ namespace Csharp_Funadamentals_w_VS2015
             WriteResult("Lowest", stats.LowestGrade);
 
             Console.ReadKey();
+        }
+
+        static void OnNameChanged(string existingName, string newName)
+        {
+            Console.WriteLine($"Grade book changing name from {existingName} to {newName}");
+        }
+
+        static void OnNameChanged2(string existingName, string newName)
+        {
+            Console.WriteLine("***");
         }
 
         static void WriteResult(string description, int result)
