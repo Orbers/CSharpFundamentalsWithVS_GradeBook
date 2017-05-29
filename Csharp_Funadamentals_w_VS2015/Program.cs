@@ -21,16 +21,22 @@ namespace Csharp_Funadamentals_w_VS2015
 
             GradeStatistics stats = book.ComputeStatistics();
 
-            Console.WriteLine(stats.AverageGrade);
-            Console.WriteLine(stats.LowestGrade);
-            Console.WriteLine(stats.HighestGrade);
-
-
-
-
+            WriteResult("Average", stats.AverageGrade);
+            WriteResult("Highest", (int)stats.HighestGrade);
+            WriteResult("Lowest", stats.LowestGrade);
 
 
             Console.ReadKey();
+        }
+
+        static void WriteResult(string description, int result)
+        {
+            Console.WriteLine(description + ": " + result);
+        }
+
+        static void WriteResult(string description, float result)
+        {
+            Console.WriteLine($"{description}: {result:F2}");
         }
     }
 }
